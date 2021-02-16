@@ -1,0 +1,45 @@
+.footer {
+    background: $menu-bg;
+    color: $white;
+    padding: 40px 0;
+    margin-top: 100px;
+
+
+    &__map {
+
+    }
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        
+        @include media($md) {
+            flex-direction: column;
+            justify-content: center;
+        }
+    }
+
+    &__title {
+        font-weight: 400;
+        font-size: 35px;
+        margin-bottom: 30px;
+    }
+    &__addres {
+        margin-bottom: 10px;
+    }
+    a {
+        color: $white;  
+        display: block;
+        margin-bottom: 10px;
+
+        &:hover {
+            color: rgb(255, 61, 61);
+        }
+    }
+}
+
+.map {
+    @include media($md) {
+        width: 200px;
+    }
+}

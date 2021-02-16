@@ -1,0 +1,37 @@
+.skills {
+    padding: 60px 0 80px 0;
+    display: flex;
+    // background: red;
+    justify-content: space-between;
+
+    @include media($xs){
+        justify-content: center
+    }
+
+    &__block {
+        @include col(2);
+        text-align: center;
+
+        @include media($md) {
+            @include col(5);
+            margin-bottom: 30px;
+        }
+        @include media($xs) {
+            @include col(10)
+        }
+    }
+
+
+    &__img {
+        width: 150px;
+        border-radius: 50%;
+    }
+
+    &__title {
+        font-size: 20px;
+        margin-top: 20px;
+        margin-bottom: 15px;
+    }
+
+
+}

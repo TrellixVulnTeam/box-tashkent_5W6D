@@ -1,0 +1,46 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+body {
+    font-family: 'Montserrat';
+    background: $white;
+}
+
+.container {
+    @include container();
+}
+
+.row {
+    @include row();
+}
+
+::after, ::before {
+    font-family: 'fontawesome';
+}
+
+.icon {
+    &-burger::before {
+        content: "\f0c9";
+        font-size: 30px;
+        color: $black;
+        // @include media($xs) {
+        //     content: '\f00d';
+        // }
+    }
+    &-close::before {
+        content: "\f00d";
+        color: $black;
+        font-size: 50px;
+    }
+}

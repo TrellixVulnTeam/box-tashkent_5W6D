@@ -1,0 +1,80 @@
+.catalog {
+    align-items: center;
+    justify-content: space-between;
+
+    @include media($md) {
+        justify-content: center;
+    }
+
+    &__title {
+        text-align: center;
+        font-size: 40px;
+        font-family: 'Montserrat';
+        font-weight: 400;
+        margin-top: 50px;
+    }
+
+    &__info {
+        text-align: center;
+        margin-top: 20px;
+        margin-bottom: 40px;
+    }
+
+    &__more {
+        color: $black;
+        background: $yellow;
+        width: 150px;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        // display: block;
+        margin: auto;
+        margin-top: 40px;
+        margin-bottom: 60px;
+        transition: 0.5s;
+
+        &:hover {
+            background: $menu-bg;
+            color: $white;
+        }
+        
+    }
+
+
+}
+
+.item {
+    color: $white;
+    @include col(4);
+    @include media($sm) {
+        @include col(10)
+    }
+    
+    @include media($md) {
+        @include col(6);
+        margin-top: 20px;
+    }
+
+    &__title {
+        text-transform: uppercase;
+        font-size: 18px;
+        margin-bottom: 40px;
+    }
+
+    &__info {
+        font-size: 13px;
+    }
+    
+    &__block {
+        background: $menu-bg;
+        margin-top: -4px;
+        padding: 40px 10px;
+        text-align: center;
+
+    }
+
+    &__img {
+        width: 100%;
+    }
+}
